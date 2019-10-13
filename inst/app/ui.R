@@ -2,7 +2,9 @@ shinyUI(
   navbarPage("R Regex Tester",
              theme=shinythemes::shinytheme("cosmo"),
              tabPanel("Home",
-                      tags$head(tags$link(rel="shortcut icon", href="favicon.png")),
+                      tags$head(tags$link(rel="shortcut icon", href="favicon.png"),
+                                tags$link(rel = "stylesheet", type = "text/css", href = "custom.css")
+                      ),
                       fluidRow(
                         column(width=12, align="left",
                                sidebarLayout(
@@ -92,16 +94,16 @@ shinyUI(
                                                       textAreaInput("test_str", label="Test String",  value="This is a test string for testing regex.",
                                                                     placeholder="Enter string to match regex against",width="100%")
                                                       ),
-                                            bsCollapse(id = "collapseExample",
-                                                       bsCollapsePanel(HTML("<strong><font size='5'>Reg-Explanation</font></strong>"),
-                                                                       HTML('explanation provided by <a href="http://rick.measham.id.au/paste/explain", target="_blank">rick.measham.id.au</a><hr>'),
-                                                                       DT::dataTableOutput("explaination_dt"),
-                                                                       style = "default")),
                                             wellPanel(style = "background-color: #f2f2f2;",
                                                       HTML("<strong><font size='5'>Results</font></strong><hr>"),
                                                       uiOutput("highlight_str"),
                                                       uiOutput("match_list_html")
-                                                      )
+                                                      ),
+                                            bsCollapse(id = "collapseExample",
+                                                       bsCollapsePanel(HTML("<strong><font size='5'>Reg-Explanation</font></strong>"),
+                                                                       HTML('explanation provided by <a href="http://rick.measham.id.au/paste/explain", target="_blank">rick.measham.id.au</a><hr>'),
+                                                                       DT::dataTableOutput("explaination_dt"),
+                                                                       style = "default"))
                                             )
                                      )
                                    )
