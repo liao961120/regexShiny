@@ -15,7 +15,7 @@ regexShiny::launch()
 
 ----
 
-# R Regex Tester Shiny App <img src='r_regex_tester/www/logo.png' width='75px' align='right'>
+# R Regex Tester Shiny App <img src='inst/app/www/logo.png' width='75px' align='right'>
 
 ### Usage
 
@@ -27,6 +27,6 @@ regexShiny::launch()
 
 <p align="center">
   <kbd>
-    <img align="center" height="300" src="readme/r_regex_app_screenshot.png" border="3">
+    <img align="center" height="300" src="https://raw.githubusercontent.com/AdamSpannbauer/r_regex_tester_app/master/readme/r_regex_app_screenshot.png" border="3">
   </kbd>
 </p>
