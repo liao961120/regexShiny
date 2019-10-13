@@ -15,7 +15,7 @@ shinyUI(
                                    checkboxGroupInput("auto_escape_check_group", "Auto Escape Backslashes",
                                                       choices = c("Pattern"="pattern",
                                                                   "Test String"="test_str"),
-                                                      selected = c("pattern")),
+                                                      selected = c("pattern", "test_str")),
                                    checkboxGroupInput("additional_params", "Additional Parameters",
                                                       choices = c("Ignore Case"="ignore_case",
                                                                   "Global"="global",
